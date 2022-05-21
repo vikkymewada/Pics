@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.vikky.pics"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp_logging_version"
+
+    implementation "androidx.core:core-ktx:$rootProject.KTXVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycleKTXVersion"
+    implementation "androidx.activity:activity-compose:$rootProject.activityComposeVersion"
+    implementation "androidx.room:room-common:$rootProject.roomVersion"
+    implementation "androidx.room:room-ktx:$rootProject.roomKTXVersion"
+    implementation "androidx.paging:paging-common-ktx:$rootProject.pagingCommonKTXVersion"
+    implementation "androidx.paging:paging-runtime-ktx:$rootProject.pagingCommonKTXVersion"
+
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerviewVersion"
+
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$rootProject.swipeRefreshVersion"
+    implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+    //Dagger - Hilt
+    implementation "com.google.dagger:hilt-android:$rootProject.hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$rootProject.hiltVersion"
+
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+    implementation "com.jsibbold:zoomage:$rootProject.zoomageVersion"
+
+    //Material
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:$rootProject.pagingLibVersion"
+    // optional - Paging 3 Integration
+    implementation "androidx.room:room-paging:$rootProject.roomPagingVersion"
+}

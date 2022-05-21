@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pics</string>
+    <string name="retry">Retry</string>
+    <string name="photo">Photo</string>
+    <string name="background_blur_image">Background Blur Image</string>
+    <string name="share">Share</string>
+    <string name="save">save</string>
+    <string name="no_internet">No internet connectivity</string>
+    <string name="error_occurred">Some error occurred</string>
+    <string name="share_photo">Share Photo</string>
+</resources>

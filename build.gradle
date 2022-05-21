@@ -1,0 +1,41 @@
+buildscript {
+    ext {
+        retrofit_version = '2.9.0'
+        okhttp_version = '4.9.3'
+        okhttp_logging_version = '4.9.1'
+        hiltVersion = '2.40.1'
+        appCompatVersion = '1.4.1'
+        glideVersion = "4.13.2"
+        materialVersion = '1.6.0'
+        pagingLibVersion = "3.0.0-alpha13"
+        KTXVersion = '1.7.0'
+        lifecycleKTXVersion = '2.4.1'
+        activityComposeVersion = '1.3.1'
+        roomVersion = '2.4.2'
+        pagingCommonKTXVersion = '3.1.1'
+        roomKTXVersion = '2.4.2'
+        recyclerviewVersion = '1.2.1'
+        constraintLayoutVersion = '2.1.3'
+        swipeRefreshVersion = '1.1.0'
+        cardViewVersion = '1.0.0'
+        junitVersion = '4.13.2'
+        junitExtVersion = '1.1.3'
+        espressoVersion = '3.4.0'
+        zoomageVersion = '1.3.1'
+        roomPagingVersion = '2.5.0-alpha01'
+    }
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.0' apply false
+    id 'com.android.library' version '7.2.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.5.31' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
