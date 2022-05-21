@@ -58,3 +58,11 @@ Detail Screen
     - Identify if already saved. 
     - Info on camera, lenses, date
 
+
+https://user-images.githubusercontent.com/2221052/169649681-99ede12f-4453-40ce-99a1-dd8b595d1b26.mp4
+![pics_home_screen](https://user-images.githubusercontent.com/2221052/169649702-c78f38f0-52d9-4e30-ba5f-d2431f7085c7.png)
+![pics_home_screen_tablet](https://user-images.githubusercontent.com/2221052/169649709-35c7f207-c7f0-404f-8f5c-27894bfaaff6.png)
+![pics_detail_screen](https://user-images.githubusercontent.com/2221052/169649733-ca01b0ac-f3e7-43e9-bdc4-cb87721e7842.png)
+
+
+
